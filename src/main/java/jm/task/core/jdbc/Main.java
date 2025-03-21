@@ -21,11 +21,11 @@ public class Main {
         userService.saveUser("Pavel", "Petrov", (byte) 18);
         userService.saveUser("Andre", "Popov", (byte) 35);
 
-//        userService.getAllUsers();
-//
-//        userService.cleanUsersTable();
-//
-//        userService.dropUsersTable();
+        userService.getAllUsers();
+
+        userService.cleanUsersTable();
+
+        userService.dropUsersTable();
 
 
     }
