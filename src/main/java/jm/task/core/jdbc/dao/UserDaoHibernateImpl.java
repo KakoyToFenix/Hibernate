@@ -21,43 +21,58 @@ public class UserDaoHibernateImpl implements UserDao {
 
     @Override
     public void createUsersTable() {
-        Session session = sessionFactory.openSession();
-        session.getTransaction().begin();
-        session.createSQLQuery("CREATE TABLE IF NOT EXISTS `user`(id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, name VARCHAR(255), lastName VARCHAR(255), age TINYINT)")
-                .executeUpdate();
-        session.getTransaction().commit();
+        try (Session session = sessionFactory.openSession()) {
+            session.getTransaction().begin();
+            session.createSQLQuery("CREATE TABLE IF NOT EXISTS `user`(id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, name VARCHAR(255), lastName VARCHAR(255), age TINYINT)")
+                    .executeUpdate();
+            session.getTransaction().commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void dropUsersTable() {
-        Session session = sessionFactory.openSession();
-        session.getTransaction().begin();
-        session.createSQLQuery("DROP TABLE IF EXISTS `user`").executeUpdate();
-        session.getTransaction().commit();
+        try (Session session = sessionFactory.openSession()) {
+            session.getTransaction().begin();
+            session.createSQLQuery("DROP TABLE IF EXISTS `user`").executeUpdate();
+            session.getTransaction().commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void saveUser(String name, String lastName, byte age) {
-        Session session = sessionFactory.openSession();
-        session.getTransaction().begin();
-        session.save(new User(name, lastName, age));
-        session.getTransaction().commit();
-        System.out.printf("User с именем - %s добавлен в базу данных.%n", name);
+        try (Session session = sessionFactory.openSession()) {
+            session.getTransaction().begin();
+            session.save(new User(name, lastName, age));
+            session.getTransaction().commit();
+            System.out.printf("User с именем - %s добавлен в базу данных.%n", name);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void removeUserById(long id) {
-        Session session = sessionFactory.openSession();
-        session.getTransaction().begin();
-        session.delete(session.get(User.class, id));
-        session.getTransaction().commit();
+        try (Session session = sessionFactory.openSession()) {
+            session.getTransaction().begin();
+            session.delete(session.get(User.class, id));
+            session.getTransaction().commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public List<User> getAllUsers() {
         List<User> users = new ArrayList<>();
-        Session session = sessionFactory.openSession();
-        users = session.createQuery("FROM User", User.class).getResultList();
+        try (Session session = sessionFactory.openSession()) {
+            users = session.createQuery("FROM User", User.class).getResultList();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         for (User user : users) {
             System.out.println(user);
@@ -67,9 +82,12 @@ public class UserDaoHibernateImpl implements UserDao {
 
     @Override
     public void cleanUsersTable() {
-        Session session = sessionFactory.openSession();
-        session.getTransaction().begin();
-        session.createSQLQuery("DELETE FROM  `user`").executeUpdate();
-        session.getTransaction().commit();
+        try (Session session = sessionFactory.openSession()) {
+            session.getTransaction().begin();
+            session.createSQLQuery("DELETE FROM  `user`").executeUpdate();
+            session.getTransaction().commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
