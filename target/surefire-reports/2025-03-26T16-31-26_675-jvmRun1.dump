@@ -1,0 +1,296 @@
+# Created at 2025-03-26T16:31:42.379
+Thread dump for process (27348@DESKTOP-7UL52JM):
+"main" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.1/sun.nio.ch.SocketDispatcher.read0(Native Method)
+        at java.base@17.0.1/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:46)
+        at java.base@17.0.1/sun.nio.ch.NioSocketImpl.tryRead(NioSocketImpl.java:261)
+        at java.base@17.0.1/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:312)
+        at java.base@17.0.1/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+        at java.base@17.0.1/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+        at java.base@17.0.1/java.net.Socket$SocketInputStream.read(Socket.java:966)
+        at java.base@17.0.1/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:478)
+        at java.base@17.0.1/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:472)
+        at java.base@17.0.1/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+        at java.base@17.0.1/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1455)
+        at java.base@17.0.1/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1059)
+        at java.base@17.0.1/java.io.FilterInputStream.read(FilterInputStream.java:132)
+        at app//com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:64)
+        at app//com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
+        at app//com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
+        at app//com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
+        at app//com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
+        at app//com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
+        at app//com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
+        at app//com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:540)
+        at app//com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:710)
+        at app//com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:649)
+        at app//com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:951)
+        at app//com.mysql.cj.NativeSession.execSQL(NativeSession.java:1075)
+        at app//com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:930)
+        at app//com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092)
+        at app//com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040)
+        at app//com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1348)
+        at app//com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025)
+        at app//org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+        at app//org.hibernate.engine.query.spi.NativeSQLQueryPlan.performExecuteUpdate(NativeSQLQueryPlan.java:107)
+        at app//org.hibernate.internal.SessionImpl.executeNativeUpdate(SessionImpl.java:1549)
+        at app//org.hibernate.query.internal.NativeQueryImpl.doExecuteUpdate(NativeQueryImpl.java:299)
+        at app//org.hibernate.query.internal.AbstractProducedQuery.executeUpdate(AbstractProducedQuery.java:1696)
+        at app//jm.task.core.jdbc.dao.UserDaoHibernateImpl.dropUsersTable(UserDaoHibernateImpl.java:35)
+        at app//jm.task.core.jdbc.service.UserServiceImpl.dropUsersTable(UserServiceImpl.java:18)
+        at app//UserServiceTest.removeUserById(UserServiceTest.java:61)
+        at java.base@17.0.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base@17.0.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+        at java.base@17.0.1/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base@17.0.1/java.lang.reflect.Method.invoke(Method.java:568)
+        at app//org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+        at app//org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at app//org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+        at app//org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+        at app//org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+        at app//org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+        at app//org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+        at app//org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+        at app//org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+        at app//org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+        at app//org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+        at app//org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+        at app//org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+        at app//org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+        at app//org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+        at app//org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+        at app//org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+        at app//org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+        at app//org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+        at app//org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+
+"Reference Handler" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.1/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+        at java.base@17.0.1/java.lang.ref.Reference.processPendingReferences(Reference.java:253)
+        at java.base@17.0.1/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:215)
+
+"Finalizer" 
+   java.lang.Thread.State: WAITING
+        at java.base@17.0.1/java.lang.Object.wait(Native Method)
+        at java.base@17.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+        at java.base@17.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+        at java.base@17.0.1/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:172)
+
+"Signal Dispatcher" 
+   java.lang.Thread.State: RUNNABLE
+
+"Attach Listener" 
+   java.lang.Thread.State: RUNNABLE
+
+"Notification Thread" 
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.1/java.lang.Object.wait(Native Method)
+        at java.base@17.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+        at java.base@17.0.1/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:140)
+        at java.base@17.0.1/java.lang.Thread.run(Thread.java:833)
+        at java.base@17.0.1/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:162)
+
+"surefire-forkedjvm-stream-flusher" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+        at java.base@17.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+        at java.base@17.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+        at java.base@17.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+        at java.base@17.0.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+        at java.base@17.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at java.base@17.0.1/java.lang.Thread.run(Thread.java:833)
+
+"surefire-forkedjvm-command-thread" 
+   java.lang.Thread.State: RUNNABLE
+        at java.management@17.0.1/sun.management.ThreadImpl.getThreadInfo1(Native Method)
+        at java.management@17.0.1/sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:197)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.generateThreadDump(ForkedBooter.java:579)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.access$600(ForkedBooter.java:79)
+        at app//org.apache.maven.surefire.booter.ForkedBooter$4.update(ForkedBooter.java:322)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.callListeners(CommandReader.java:357)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:309)
+        at java.base@17.0.1/java.lang.Thread.run(Thread.java:833)
+
+"mysql-cj-abandoned-connection-cleanup" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.1/java.lang.Object.wait(Native Method)
+        at java.base@17.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+        at app//com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+        at java.base@17.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+        at java.base@17.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at java.base@17.0.1/java.lang.Thread.run(Thread.java:833)
+
+"Hibernate Connection Pool Validation Thread" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+        at java.base@17.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+        at java.base@17.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+        at java.base@17.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+        at java.base@17.0.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+        at java.base@17.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at java.base@17.0.1/java.lang.Thread.run(Thread.java:833)
+
+
+
+# Created at 2025-03-26T16:31:42.381
+Exiting self fork JVM. Received SHUTDOWN command from Maven shutdown hook.
+Thread dump before exiting the process (27348@DESKTOP-7UL52JM):
+"main" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.1/sun.nio.ch.SocketDispatcher.read0(Native Method)
+        at java.base@17.0.1/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:46)
+        at java.base@17.0.1/sun.nio.ch.NioSocketImpl.tryRead(NioSocketImpl.java:261)
+        at java.base@17.0.1/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:312)
+        at java.base@17.0.1/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+        at java.base@17.0.1/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+        at java.base@17.0.1/java.net.Socket$SocketInputStream.read(Socket.java:966)
+        at java.base@17.0.1/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:478)
+        at java.base@17.0.1/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:472)
+        at java.base@17.0.1/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+        at java.base@17.0.1/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1455)
+        at java.base@17.0.1/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1059)
+        at java.base@17.0.1/java.io.FilterInputStream.read(FilterInputStream.java:132)
+        at app//com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:64)
+        at app//com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
+        at app//com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
+        at app//com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
+        at app//com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
+        at app//com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
+        at app//com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
+        at app//com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:540)
+        at app//com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:710)
+        at app//com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:649)
+        at app//com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:951)
+        at app//com.mysql.cj.NativeSession.execSQL(NativeSession.java:1075)
+        at app//com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:930)
+        at app//com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092)
+        at app//com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040)
+        at app//com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1348)
+        at app//com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025)
+        at app//org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+        at app//org.hibernate.engine.query.spi.NativeSQLQueryPlan.performExecuteUpdate(NativeSQLQueryPlan.java:107)
+        at app//org.hibernate.internal.SessionImpl.executeNativeUpdate(SessionImpl.java:1549)
+        at app//org.hibernate.query.internal.NativeQueryImpl.doExecuteUpdate(NativeQueryImpl.java:299)
+        at app//org.hibernate.query.internal.AbstractProducedQuery.executeUpdate(AbstractProducedQuery.java:1696)
+        at app//jm.task.core.jdbc.dao.UserDaoHibernateImpl.dropUsersTable(UserDaoHibernateImpl.java:35)
+        at app//jm.task.core.jdbc.service.UserServiceImpl.dropUsersTable(UserServiceImpl.java:18)
+        at app//UserServiceTest.removeUserById(UserServiceTest.java:61)
+        at java.base@17.0.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base@17.0.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+        at java.base@17.0.1/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base@17.0.1/java.lang.reflect.Method.invoke(Method.java:568)
+        at app//org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+        at app//org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at app//org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+        at app//org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+        at app//org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+        at app//org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+        at app//org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+        at app//org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+        at app//org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+        at app//org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+        at app//org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+        at app//org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+        at app//org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+        at app//org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+        at app//org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+        at app//org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+        at app//org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+        at app//org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+        at app//org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+        at app//org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+
+"Reference Handler" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.1/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+        at java.base@17.0.1/java.lang.ref.Reference.processPendingReferences(Reference.java:253)
+        at java.base@17.0.1/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:215)
+
+"Finalizer" 
+   java.lang.Thread.State: WAITING
+        at java.base@17.0.1/java.lang.Object.wait(Native Method)
+        at java.base@17.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+        at java.base@17.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+        at java.base@17.0.1/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:172)
+
+"Signal Dispatcher" 
+   java.lang.Thread.State: RUNNABLE
+
+"Attach Listener" 
+   java.lang.Thread.State: RUNNABLE
+
+"Notification Thread" 
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.1/java.lang.Object.wait(Native Method)
+        at java.base@17.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+        at java.base@17.0.1/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:140)
+        at java.base@17.0.1/java.lang.Thread.run(Thread.java:833)
+        at java.base@17.0.1/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:162)
+
+"surefire-forkedjvm-stream-flusher" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+        at java.base@17.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+        at java.base@17.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+        at java.base@17.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+        at java.base@17.0.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+        at java.base@17.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at java.base@17.0.1/java.lang.Thread.run(Thread.java:833)
+
+"surefire-forkedjvm-command-thread" 
+   java.lang.Thread.State: RUNNABLE
+        at java.management@17.0.1/sun.management.ThreadImpl.getThreadInfo1(Native Method)
+        at java.management@17.0.1/sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:197)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.generateThreadDump(ForkedBooter.java:579)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.access$600(ForkedBooter.java:79)
+        at app//org.apache.maven.surefire.booter.ForkedBooter$4.update(ForkedBooter.java:315)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.callListeners(CommandReader.java:357)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.exitByConfiguration(CommandReader.java:367)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:330)
+        at java.base@17.0.1/java.lang.Thread.run(Thread.java:833)
+
+"mysql-cj-abandoned-connection-cleanup" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.1/java.lang.Object.wait(Native Method)
+        at java.base@17.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+        at app//com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+        at java.base@17.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+        at java.base@17.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at java.base@17.0.1/java.lang.Thread.run(Thread.java:833)
+
+"Hibernate Connection Pool Validation Thread" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+        at java.base@17.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+        at java.base@17.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+        at java.base@17.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+        at java.base@17.0.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+        at java.base@17.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at java.base@17.0.1/java.lang.Thread.run(Thread.java:833)
+
+
+
