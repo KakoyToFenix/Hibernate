@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="UserServiceTest" time="1.432" tests="6" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="UserServiceTest" time="1.464" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="RU"/>
     <property name="sun.boot.library.path" value="G:\Java\jdk17\bin"/>
-    <property name="sun.java.command" value="C:\Users\alkir\AppData\Local\Temp\surefire10045286682137409885\surefirebooter-20250326164809053_3.jar C:\Users\alkir\AppData\Local\Temp\surefire10045286682137409885 2025-03-26T16-48-08_950-jvmRun1 surefire-20250326164809053_1tmp surefire_0-20250326164809053_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\alkir\AppData\Local\Temp\surefire5358583197385993337\surefirebooter-20250328131111854_3.jar C:\Users\alkir\AppData\Local\Temp\surefire5358583197385993337 2025-03-28T13-11-11_740-jvmRun1 surefire-20250328131111854_1tmp surefire_0-20250328131111854_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\alkir\IdeaProjects\PP_1_1_3-4_JDBC_Hibernate\target\test-classes;C:\Users\alkir\IdeaProjects\PP_1_1_3-4_JDBC_Hibernate\target\classes;C:\Users\alkir\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\alkir\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\alkir\.m2\repository\mysql\mysql-connector-java\8.0.25\mysql-connector-java-8.0.25.jar;C:\Users\alkir\.m2\repository\com\google\protobuf\protobuf-java\3.11.4\protobuf-java-3.11.4.jar;C:\Users\alkir\.m2\repository\org\hibernate\javax\persistence\hibernate-jpa-2.1-api\1.0.2.Final\hibernate-jpa-2.1-api-1.0.2.Final.jar;C:\Users\alkir\.m2\repository\org\hibernate\hibernate-core\5.6.3.Final\hibernate-core-5.6.3.Final.jar;C:\Users\alkir\.m2\repository\org\jboss\logging\jboss-logging\3.4.2.Final\jboss-logging-3.4.2.Final.jar;C:\Users\alkir\.m2\repository\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar;C:\Users\alkir\.m2\repository\net\bytebuddy\byte-buddy\1.11.20\byte-buddy-1.11.20.jar;C:\Users\alkir\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\alkir\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.1.1.Final\jboss-transaction-api_1.2_spec-1.1.1.Final.jar;C:\Users\alkir\.m2\repository\org\jboss\jandex\2.2.3.Final\jandex-2.2.3.Final.jar;C:\Users\alkir\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\alkir\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\alkir\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.2.Final\hibernate-commons-annotations-5.1.2.Final.jar;C:\Users\alkir\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\alkir\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.1\jaxb-runtime-2.3.1.jar;C:\Users\alkir\.m2\repository\org\glassfish\jaxb\txw2\2.3.1\txw2-2.3.1.jar;C:\Users\alkir\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.7\istack-commons-runtime-3.0.7.jar;C:\Users\alkir\.m2\repository\org\jvnet\staxex\stax-ex\1.8\stax-ex-1.8.jar;C:\Users\alkir\.m2\repository\com\sun\xml\fastinfoset\FastInfoset\1.2.15\FastInfoset-1.2.15.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\alkir\AppData\Local\Temp\surefire10045286682137409885\surefirebooter-20250326164809053_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\alkir\AppData\Local\Temp\surefire5358583197385993337\surefirebooter-20250328131111854_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.1+12-39"/>
@@ -57,7 +57,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="saveUser" classname="UserServiceTest" time="1.149">
+  <testcase name="saveUser" classname="UserServiceTest" time="1.201">
     <system-out><![CDATA[Hibernate: DROP TABLE IF EXISTS `user`
 Hibernate: CREATE TABLE IF NOT EXISTS `user`(id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, name VARCHAR(255), lastName VARCHAR(255), age TINYINT)
 Hibernate: insert into User (age, lastName, name) values (?, ?, ?)
@@ -65,25 +65,25 @@ User с именем - Ivan добавлен в базу данных.
 Hibernate: select user0_.id as id1_0_, user0_.age as age2_0_, user0_.lastName as lastname3_0_, user0_.name as name4_0_ from User user0_
 User{id=1, name='Ivan', lastName='Ivanov', age=5}
 ]]></system-out>
-    <system-err><![CDATA[мар. 26, 2025 4:48:09 PM org.hibernate.Version logVersion
+    <system-err><![CDATA[мар. 28, 2025 1:11:12 PM org.hibernate.Version logVersion
 INFO: HHH000412: Hibernate ORM core version 5.6.3.Final
-мар. 26, 2025 4:48:09 PM org.hibernate.annotations.common.reflection.java.JavaReflectionManager <clinit>
+мар. 28, 2025 1:11:12 PM org.hibernate.annotations.common.reflection.java.JavaReflectionManager <clinit>
 INFO: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-мар. 26, 2025 4:48:09 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+мар. 28, 2025 1:11:12 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
 WARN: HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-мар. 26, 2025 4:48:09 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+мар. 28, 2025 1:11:12 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
 INFO: HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/demotest]
-мар. 26, 2025 4:48:09 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+мар. 28, 2025 1:11:12 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
 INFO: HHH10001001: Connection properties: {password=****, user=root}
-мар. 26, 2025 4:48:09 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+мар. 28, 2025 1:11:12 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
 INFO: HHH10001003: Autocommit mode: false
-мар. 26, 2025 4:48:09 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections <init>
+мар. 28, 2025 1:11:12 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections <init>
 INFO: HHH000115: Hibernate connection pool size: 20 (min=1)
-мар. 26, 2025 4:48:09 PM org.hibernate.dialect.Dialect <init>
+мар. 28, 2025 1:11:12 PM org.hibernate.dialect.Dialect <init>
 INFO: HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
 ]]></system-err>
   </testcase>
-  <testcase name="removeUserById" classname="UserServiceTest" time="0.107">
+  <testcase name="removeUserById" classname="UserServiceTest" time="0.058">
     <system-out><![CDATA[Hibernate: DROP TABLE IF EXISTS `user`
 Hibernate: CREATE TABLE IF NOT EXISTS `user`(id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, name VARCHAR(255), lastName VARCHAR(255), age TINYINT)
 Hibernate: insert into User (age, lastName, name) values (?, ?, ?)
@@ -92,7 +92,7 @@ Hibernate: select user0_.id as id1_0_0_, user0_.age as age2_0_0_, user0_.lastNam
 Hibernate: delete from User where id=?
 ]]></system-out>
   </testcase>
-  <testcase name="getAllUsers" classname="UserServiceTest" time="0.046">
+  <testcase name="getAllUsers" classname="UserServiceTest" time="0.045">
     <system-out><![CDATA[Hibernate: DROP TABLE IF EXISTS `user`
 Hibernate: CREATE TABLE IF NOT EXISTS `user`(id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, name VARCHAR(255), lastName VARCHAR(255), age TINYINT)
 Hibernate: insert into User (age, lastName, name) values (?, ?, ?)
@@ -101,7 +101,7 @@ Hibernate: select user0_.id as id1_0_, user0_.age as age2_0_, user0_.lastName as
 User{id=1, name='Ivan', lastName='Ivanov', age=5}
 ]]></system-out>
   </testcase>
-  <testcase name="dropUsersTable" classname="UserServiceTest" time="0.019">
+  <testcase name="dropUsersTable" classname="UserServiceTest" time="0.018">
     <system-out><![CDATA[Hibernate: DROP TABLE IF EXISTS `user`
 Hibernate: DROP TABLE IF EXISTS `user`
 ]]></system-out>
@@ -111,7 +111,7 @@ Hibernate: DROP TABLE IF EXISTS `user`
 Hibernate: CREATE TABLE IF NOT EXISTS `user`(id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, name VARCHAR(255), lastName VARCHAR(255), age TINYINT)
 ]]></system-out>
   </testcase>
-  <testcase name="cleanUsersTable" classname="UserServiceTest" time="0.049">
+  <testcase name="cleanUsersTable" classname="UserServiceTest" time="0.077">
     <system-out><![CDATA[Hibernate: DROP TABLE IF EXISTS `user`
 Hibernate: CREATE TABLE IF NOT EXISTS `user`(id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, name VARCHAR(255), lastName VARCHAR(255), age TINYINT)
 Hibernate: insert into User (age, lastName, name) values (?, ?, ?)
